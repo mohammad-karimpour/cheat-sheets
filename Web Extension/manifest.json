@@ -1,0 +1,24 @@
+{
+    "manifest_version": 3,
+    "name": "Mazwar First Extension",
+    "version": "1.0",
+    "description": "This is my first Chrome extension in Mazwar Company",
+    "permissions": ["activeTab","storage","tabs"],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "action": {
+      "default_popup": "popup.html"
+    },
+    "content_scripts": [
+        {
+          "matches": ["<all_urls>"],
+          "js": ["content.js"]
+        }
+      ],
+    "icons": {
+      "512": "icon.png"
+    }, 
+    "options_page": "options.html"  
+  }
+  
